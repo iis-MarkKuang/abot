@@ -1,1 +1,40 @@
-<mxfile host="app.diagrams.net" modified="2021-11-25T01:09:31.344Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36" version="15.8.6" etag="Eqhlr-DoKzHz39i8sXqX" type="github"><diagram id="BELzM-fYE5PC9gYCR4fg">UzV2zq1wL0osyPDNT0nNUTV2VTV2LsrPL4GwciucU3NyVI0MMlNUjV1UjYwMgFjVyA2HrCFY1qAgsSg1rwSLBiADYTaQg2Y1AA==</diagram></mxfile>
+<mxfile host="app.diagrams.net" modified="2021-11-30T05:26:31.086Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36" etag="D69mIhzS2oC0uPCfvEUg" version="15.8.6" type="github">
+  <diagram id="BELzM-fYE5PC9gYCR4fg" name="Page-1">
+    <mxGraphModel dx="946" dy="542" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="tutwc7gwor7vC9uOolVi-1" value="FixPriceWorker" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="120" y="30" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="tutwc7gwor7vC9uOolVi-2" value="ItemSplitLevelWorker&lt;br&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="350" y="30" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="tutwc7gwor7vC9uOolVi-3" value="PromoSplitLevelWorker" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="570" y="30" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="tutwc7gwor7vC9uOolVi-4" value="Get Rec Items" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="120" y="80" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="tutwc7gwor7vC9uOolVi-7" value="For Each Item&lt;br&gt;1. Get Fix Price Strategy&lt;br&gt;(NORMAL_DIST/&lt;br&gt;SPLIT_LEVEL_RANDOM/&lt;br&gt;SPLIT_LEVEL_ORA)&lt;br&gt;&lt;br&gt;2. If start &amp;amp; end &amp;amp; avg are set, get FixPriceService Based on strategyCode, if service null, add original item&amp;nbsp;to newRecItems List&lt;br&gt;.&lt;br&gt;&lt;br&gt;3. If service got, get prices service.getPrices based on context and item, flatMap prices to item and add all to newRecItems list&amp;nbsp;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="90" y="130" width="180" height="260" as="geometry" />
+        </mxCell>
+        <mxCell id="tutwc7gwor7vC9uOolVi-8" value="Get Rec Items" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="350" y="80" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="tutwc7gwor7vC9uOolVi-9" value="Get Rec Items" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="580" y="80" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="tutwc7gwor7vC9uOolVi-10" value="For Each Item&lt;br&gt;1. Get Fix Price Strategy&lt;br&gt;(NORMAL_DIST/&lt;br&gt;SPLIT_LEVEL_RANDOM/&lt;br&gt;SPLIT_LEVEL_ORA), if strategy null, add original item to newRecItems List&lt;br&gt;&lt;br&gt;2. If start &amp;amp; end &amp;amp; avg are set, get split Level prices based on context and item, flatMap level prices to item and add all to newRecItemsList.&lt;br&gt;&lt;br&gt;3. If not set, add original item to newRecItems list" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="320" y="130" width="180" height="260" as="geometry" />
+        </mxCell>
+        <mxCell id="tutwc7gwor7vC9uOolVi-11" value="For Each Item&lt;br&gt;1. If item not split tag, throw exception&lt;br&gt;&lt;br&gt;2. Get item tag level map for each itemId&amp;nbsp;&lt;br&gt;&lt;br&gt;3. Get tag levels based on item tag name&lt;br&gt;&lt;br&gt;4. For each level, flatMap orig item to that level and name the new item by level, tag name and orig item id, and set ora attrs accordingly&lt;br&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="550" y="250" width="180" height="220" as="geometry" />
+        </mxCell>
+        <mxCell id="tutwc7gwor7vC9uOolVi-13" value="Get Tag SplitLevel Config and parse to SplitLevelConfig and convert to&lt;br&gt;&amp;nbsp;item - tagLevelMap&lt;br&gt;item - tagTypeMap&lt;br&gt;tagName - LevelMap" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="580" y="130" width="120" height="100" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
